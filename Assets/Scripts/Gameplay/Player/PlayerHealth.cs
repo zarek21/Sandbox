@@ -6,6 +6,14 @@ public class PlayerHealth : MonoBehaviour
     // Variables for player health
     [SerializeField]private int maxHealth = 100;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && CurrentHealth != 0)
+        {
+            TakeDamage(10);
+        } 
+    }
+
     // Estado Y propiedades
     // Propiedad pública para leer, pero privada para modificar.
     // Cualquiera puede preguntar "¿cuál es tu vida?", pero solo PlayerHealth puede cambiarla.
